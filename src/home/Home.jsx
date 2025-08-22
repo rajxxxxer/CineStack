@@ -6,8 +6,13 @@ import play_icon from 'assets/play_icon.png';
 import info_icon from 'assets/info_icon.png';
 import TitleCards from '../Titlecards/TitleCards';
 import Footer from '../components/footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const nav=useNavigate();
+  const handleplay=()=>{
+       nav("/trailer/GRFVfUhoTeM");
+  }
   return (
     <>
       <div className="relative w-full bg-black text-white">
@@ -45,7 +50,7 @@ const Home = () => {
             <div className="btns flex items-center gap-4 flex-wrap">
               <button className="btn flex items-center gap-2 px-5 py-2.5 bg-white text-black rounded-md text-sm font-semibold hover:bg-red-600 hover:text-white hover:scale-105 transition-transform duration-300 shadow-md">
                 <img src={play_icon} alt="Play Icon" className="w-5 h-5 object-contain" />
-                <span>Play</span>
+                <span onClick={handleplay}>Play</span>
               </button>
 
               <button className="btn flex items-center gap-2 px-5 py-2.5 bg-blue-700 text-white rounded-md text-sm font-semibold hover:bg-red-600 hover:scale-105 transition-transform duration-300 shadow-md">

@@ -40,6 +40,7 @@ function App() {
 
       <Routes>
         <Route path='/watch' element={<Watchlists></Watchlists>}></Route>
+     
         <Route path="/" element={<Home />} />
         <Route path="/tv-shows" element={<Tvshow />} />
         <Route path="/movies" element={<Movies />} />
